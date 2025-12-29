@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/shared/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Datamaglia - AI-Powered Data Governance for Manufacturing & Supply Chain",
@@ -39,9 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
